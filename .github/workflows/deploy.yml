@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
   workflow_dispatch:
 
 # Pages 部署需要的权限
@@ -13,7 +13,7 @@ permissions:
 
 # 确保只有一个部署任务同时运行
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -22,31 +22,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 11.22.0
+          version: 10
           run_install: false
-          
+
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
-      
+
       - name: Build site
         run: pnpm run build
 
       - name: Create .nojekyll file
         run: touch dist/.nojekyll
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Astro默认构建输出目录
+          path: dist # Astro默认构建输出目录
 
   deploy:
     environment:
