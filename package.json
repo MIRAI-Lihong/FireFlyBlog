@@ -21,7 +21,8 @@
     "lint": "biome check --write ./src ./scripts",
     "preinstall": "npx only-allow pnpm",
     "lqips": "npx tsx scripts/generate-lqips.ts",
-    "github-cards": "npx tsx scripts/generate-github-card-data.ts"
+    "github-cards": "npx tsx scripts/generate-github-card-data.ts",
+    "sync-notion": "node --env-file=.env scripts/sync-notion.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -47,6 +48,7 @@
     "@iconify/utils": "^3.1.7",
     "@mermanjs/web": "0.8.0-alpha.3",
     "@napi-rs/wasm-runtime": "^1.2.2",
+    "@notionhq/client": "^5.27.0",
     "@swup/astro": "^1.8.0",
     "@tailwindcss/typography": "^0.5.20",
     "@types/hast": "^3.0.5",
@@ -68,6 +70,7 @@
     "l2d-widget": "^0.1.1",
     "marked": "^18.0.12",
     "mdast-util-to-string": "^4.0.0",
+    "notion-to-md": "^3.1.9",
     "pagefind": "^1.5.2",
     "pako": "^3.0.1",
     "qrcode": "^1.5.4",
