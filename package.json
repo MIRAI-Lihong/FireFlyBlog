@@ -22,7 +22,8 @@
     "preinstall": "npx only-allow pnpm",
     "lqips": "npx tsx scripts/generate-lqips.ts",
     "github-cards": "npx tsx scripts/generate-github-card-data.ts",
-    "sync-notion": "node --env-file=.env scripts/sync-notion.js"
+    "sync-notion": "node scripts/sync-notion.js",
+    "sync-notion-local": "node --env-file=.env scripts/sync-notion.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
