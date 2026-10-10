@@ -68,6 +68,7 @@ async function syncNotion() {
         const toc = getCheckbox(props['toc'])
         const password = getRichText(props['password'])
         const status = getSelect(props['status'])
+        const cover = getRichText(props['cover'])
 
         // 如果缺少 slug，跳过该文章并提示
         if (!slug) {
@@ -92,6 +93,7 @@ async function syncNotion() {
         if (category) frontmatter += `category: ${yamlStr(category)}\n`
         if (series) frontmatter += `series: ${yamlStr(series)}\n`
         if (password) frontmatter += `password: ${yamlStr(password)}\n`
+        if (cover) frontmatter += `cover: ${yamlStr(cover)}\n`
 
         frontmatter += `toc: ${toc}\n` // 布尔值不需要引号
 
