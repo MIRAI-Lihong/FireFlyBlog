@@ -37,11 +37,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Sync Notion
+      - name: Sync Notion Posts
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: pnpm run sync-notion
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_POSTS_DATABASE_ID }}
+        run: pnpm run sync-posts
+
+      - name: Sync Notion Dynamic
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DYNAMIC_DATABASE_ID }}
+        run: pnpm run sync-dynamic
 
       - name: Build site
         run: pnpm run build

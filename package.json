@@ -22,8 +22,10 @@
     "preinstall": "npx only-allow pnpm",
     "lqips": "npx tsx scripts/generate-lqips.ts",
     "github-cards": "npx tsx scripts/generate-github-card-data.ts",
-    "sync-notion": "node scripts/sync-notion.js",
-    "sync-notion-local": "node --env-file=.env scripts/sync-notion.js"
+    "sync-posts": "node scripts/sync-posts.js",
+    "sync-dynamic": "node scripts/sync-dynamic.js",
+    "slp": "node --env-file=.env scripts/sync-posts.js",
+    "sld": "node --env-file=.env scripts/sync-dynamic.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

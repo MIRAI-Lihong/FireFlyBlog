@@ -26,7 +26,7 @@ const toDate = str => new Date(str).toISOString().substring(0, 10)
 // === 辅助函数：获取数据库对应的数据源 ID ===
 async function getDataSourceId() {
   const database = await notion.databases.retrieve({
-    database_id: process.env.NOTION_DATABASE_ID
+    database_id: process.env.NOTION_POSTS_DATABASE_ID
   })
 
   console.log('数据库对应的数据源：', database.data_sources)
