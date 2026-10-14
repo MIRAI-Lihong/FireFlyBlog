@@ -3,7 +3,7 @@ title: '个人图床工具开发'
 published: 2026-10-10
 description: ''
 category: '技术文章'
-cover: 'https://mirai-image-bed.oss-cn-shenzhen.aliyuncs.com/uploads/2026/10/11/a169e2e5-8497-46e6-9231-17da7ca049d7.jpeg'
+image: 'https://mirai-image-bed.oss-cn-shenzhen.aliyuncs.com/uploads/2026/10/11/a169e2e5-8497-46e6-9231-17da7ca049d7.jpeg'
 toc: true
 tags:
   - 'Vue'

@@ -4,7 +4,7 @@ published: 2026-10-13
 description: '从零开始记录学习Go的历程'
 category: '技术文章'
 series: 'Go语言'
-cover: 'https://mirai-image-bed.oss-cn-shenzhen.aliyuncs.com/uploads/2026/10/14/be176afa-fc61-4ea6-8df6-3e1e80c50a65.jpeg'
+image: 'https://mirai-image-bed.oss-cn-shenzhen.aliyuncs.com/uploads/2026/10/14/be176afa-fc61-4ea6-8df6-3e1e80c50a65.jpeg'
 toc: true
 tags:
   - 'Go语言'
